@@ -3,12 +3,12 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 var bio = {
     "name": "Ken Chan",
-    "role": "Programmer",
+    "role": "Photographer and Programmer",
     "contacts": {
         "mobile": "99009900",
         "email": "kenchanchunhei@gmail.com",
         "github": "ken00815",
-        "location": "Hong Kong"
+        "location": "Kwai Chung, Hong Kong"
     },
     "bioPic": "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68dd54ca-60cf-4ef7-898b-26d7cbe48ec7/10-dithering-opt.jpg",
     "welMsg": "Welcome to my resume! Please feel free to contact me if interested.",
@@ -49,7 +49,7 @@ var bio = {
 
 var education = {
     "schools": [{
-            "name": "TSSS",
+            "name": "Tak Sun Secondary School",
             "location": "ShaTin",
             "degree": "Secondary",
             "major": ["Pure Mathematics", "Chemistry", "Physics"],
@@ -57,7 +57,7 @@ var education = {
             "url": "http://www.tsss.edu.hk"
         },
         {
-            "name": "HSMC",
+            "name": "Hang Seng Management College",
             "location": "ShaTin",
             "degree": "BA",
             "major": ["Supply Chain Management"],

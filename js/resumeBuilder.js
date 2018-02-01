@@ -4,7 +4,7 @@ This is empty on purpose! Your code to build the resume will go here.
 var bio = {
     "name": "Ken Chan",
     "role": "Programmer",
-    "contact": {
+    "contacts": {
         "mobile": "99009900",
         "email": "kenchanchunhei@gmail.com",
         "github": "ken00815",
@@ -20,13 +20,13 @@ var bio = {
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
         $("#header").append(formattedRole);
         //Contact
-        var formattedMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
+        var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
         $("#header").append(formattedMobile);
-        var formattedEmail = HTMLemail.replace("%data%", bio.contact.email);
+        var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
         $("#header").append(formattedEmail);
-        var formattedGhub = HTMLgithub.replace("%data%", bio.contact.github);
+        var formattedGhub = HTMLgithub.replace("%data%", bio.contacts.github);
         $("#header").append(formattedGhub);
-        var formattedLocation = HTMLlocation.replace("%data%", bio.contact.location);
+        var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
         $("#header").append(formattedLocation);
         //end of contact
         var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
@@ -50,15 +50,15 @@ var bio = {
 var education = {
     "schools": [{
             "name": "TSSS",
-            "city": "ShaTin",
+            "location": "ShaTin",
             "degree": "Secondary",
-            "major": ["Pure Maths", "Chemistry", "Physics"],
+            "major": ["Pure Mathematics", "Chemistry", "Physics"],
             "dates": "Sep 2004 - Jul 2012",
             "url": "http://www.tsss.edu.hk"
         },
         {
             "name": "HSMC",
-            "city": "ShaTin",
+            "location": "ShaTin",
             "degree": "BA",
             "major": ["Supply Chain Management"],
             "dates": "Sep 2012 - Jun 2016",
@@ -82,7 +82,7 @@ var education = {
                 $(".education-entry:last").append(formattedDegree);
                 var formattedDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
                 $(".education-entry:last").append(formattedDates);
-                var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].city);
+                var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
                 $(".education-entry:last").append(formattedLocation);
                 var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
                 $(".education-entry:last").append(formattedMajor);
@@ -212,5 +212,4 @@ work.display();
 education.display();
 project.display();
 
-
-// $("#mapDiv").append(map);
+$("#mapDiv").append(googleMap);

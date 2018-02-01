@@ -43,7 +43,7 @@ var bio = {
             }
         } else {
             console.log("No skills");
-        };
+        }
     }
 };
 
@@ -91,15 +91,15 @@ var education = {
             }
             if (education.onlineCourses.length > 0) {
                 $("#education").append(HTMLonlineClasses);
-                for (var i = 0; i < education.onlineCourses.length; i++) {
+                for (var j = 0; j < education.onlineCourses.length; j++) {
                     $("#education").append(HTMLschoolStart);
-                    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
+                    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[j].title);
                     $(".education-entry:last").append(formattedOnlineTitle);
-                    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
+                    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[j].school);
                     $(".education-entry:last").append(formattedOnlineSchool);
-                    var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
+                    var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[j].dates);
                     $(".education-entry:last").append(formattedOnlineDates);
-                    var formattedOnlineUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url);
+                    var formattedOnlineUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[j].url);
                     $(".education-entry:last").append(formattedOnlineUrl);
                 }
             }
@@ -148,7 +148,7 @@ var work = {
             $(".work-entry:last").append(formattedWorkDate);
             $(".work-entry:last").append(formattedWorkLocation);
             $(".work-entry:last").append(formattedWorkDescription);
-        };
+        }
     }
 };
 
@@ -183,8 +183,8 @@ var project = {
                     formattedpImage = HTMLprojectImage.replace("%data%", project.projectDetails[i].images);
                 }
             } else {
-              console.log("No Projects")
-            };
+              console.log("No Projects");
+            }
 
             $(".project-entry:last").append(formattedpTitle);
             $(".project-entry:last").append(formattedpDates);
@@ -193,18 +193,6 @@ var project = {
 
         }
     }
-};
-
-//Internationalize the full name
-$("#main").append(internationalizeButton)
-
-function inName() {
-    var norName = bio.name.split(" ");
-    norName[0] = norName[0].slice(0, 1).toUpperCase() + norName[0].slice(1).toLowerCase();
-    norName[1] = norName[1].toUpperCase();
-    var name = norName[0] + " " + norName[1];
-    console.log("Name is internationalized!")
-    return name;
 };
 
 bio.display();
